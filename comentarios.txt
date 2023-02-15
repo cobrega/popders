@@ -1,0 +1,23 @@
+He partido de los archivos que había en la rama dev
+
+-- estructura.sql
+    He hecho algunos cambios en la estructura de la base de datos:
+        * el 'id_coder' de la tabla 'coder' lo he puesto con autoincremento
+        * he cambiado la definición de la clave foránea, creo que estaba al revés
+
+-- Coders.php
+        * he añadido el método 'existeCoder($name)' para comprrobar si ya existe un usuario en la BD
+        * revisa el método 'addRow($name)': si el ecampo 'id_coder' no se auntoincrementa no funcionaría
+        * no he probado el método 'deleteRow', pero es bueno comprobar si borra en cascada de la tabla 'song'
+
+-- Songs.php
+        * he añadido el método 'addRow2' para facilitarme el trabajo
+        * revisa el método 'addRow': le falta el campo 'img' que no puede ser nulo y no tiene valor por defecto ( al de update le pasa lo mismo)
+
+-- FormNuevaCancion.html
+        * he copiado el formulario que tenías y he cambiado algunas líneas. Le faltarían las validaciones con javascript
+
+-- Procesar.php
+        * recibe los datos del formulario e inserta la canción (y crea el usuario si no existe)
+        * le faltarían validaciones de datos y qué hacer en caso de error
+        * no está muy bien hecho XD, pero quizás te sirva como idea
